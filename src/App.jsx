@@ -1,11 +1,12 @@
+import { TodoWrapper } from './components/TodoWrapper';
 import './index.scss'
 
 function App() {
   return (
-      <div>
-        <h2></h2>
+      <div className="App">
+      <TodoWrapper/>
       </div>
       );
 }
 
-      export default App;
+export default App;

@@ -1,5 +1,5 @@
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,8 +44,12 @@ h1 {
   color: #fff;
 }
 
+.todo-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3019607843);
+}
+
 .todo-input::placeholder {
-  color: #ffffff4d;
+  color: rgba(255, 255, 255, 0.3019607843);
 }
 
 .todo-btn {
@@ -54,7 +58,6 @@ h1 {
   border: none;
   padding: 0.55rem;
   cursor: pointer;
-  
 }
 
 .todo {
@@ -76,4 +79,4 @@ h1 {
 .completed {
   color: #c5aeff;
   text-decoration: line-through;
-}
+}/*# sourceMappingURL=index.css.map */
