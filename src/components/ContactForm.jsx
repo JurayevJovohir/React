@@ -10,6 +10,7 @@ const ContactForm = ({contacts, setContacts}) => {
         evt.preventDefault();
 
         const newContact = {
+            id: contacts.length > 0 ? contacts[contacts.length - 1].id + 1 : 1,
             name: elName.current.value,
             relationship: elRelationship.current.value,
             phone: elPhone.current.value,

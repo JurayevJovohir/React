@@ -18,7 +18,11 @@ const ContactBook = () => {
                 <div className="div-list col-5">
                     <h2 className="form-title">Contacts</h2>
                     {contacts.map((contact, index) => (
-                        <ContactCard key={index} contact={contact} />
+                        <ContactCard 
+                        key={index} 
+                        contact={contact}
+                        contacts={contacts}
+                        setContacts={setContacts} />
                     ))}
                 </div>
             </div>
