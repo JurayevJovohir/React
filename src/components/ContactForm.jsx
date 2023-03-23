@@ -1,20 +1,24 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 const ContactForm = ({contacts, setContacts}) => {
 
-    const [name, setName] = useState('');
-    const [relationship, setRelationship] = useState('');
-    const [phone, setPhone] = useState('');
+    const elName = useRef();
+    const elRelationship = useRef();
+    const elPhone = useRef();
 
     const submitHandler = (evt) => {
         evt.preventDefault();
 
         const newContact = {
-            name,
-            relationship,
-            phone
+            name: elName.current.value,
+            relationship: elRelationship.current.value,
+            phone: elPhone.current.value,
         };
-        setContacts([...contacts, newContact]);   
+        setContacts([...contacts, newContact]);  
+        
+        elName.current.value = '';
+        elRelationship.current.value = '';
+        elPhone.current.value = '';
     };
     return (
         <form onSubmit={submitHandler} className="js-form">
@@ -22,24 +26,21 @@ const ContactForm = ({contacts, setContacts}) => {
                 <input className="js-input form-control"
                     type="text"
                     placeholder="Name"
-                    value={name}
-                    onChange={(evt) => setName(evt.target.value)}
+                    ref={elName}
                     required />
             </label>
             <label className="d-block">
                 <input className="js-input-two form-control"
                     type="text"
                     placeholder="Relationship"
-                    value={relationship}
-                    onChange={(evt) => setRelationship(evt.target.value)}
+                    ref={elRelationship}
                     required />
             </label>
             <label className="d-block">
                 <input className="js-input-contact form-control"
                     type="tel"
                     placeholder="Phone"
-                    value={phone}
-                    onChange={(evt) => setPhone(evt.target.value)}
+                    ref={elPhone}
                     required />
             </label>
             <button className="js-btn btn btn-primary col-12">Add contact</button>
