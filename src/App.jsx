@@ -1,11 +1,14 @@
-import "./index.scss";
+import { useState } from 'react';
+import './index.scss'
+import ContactBook from './components/ContactBook';
 
 function App() {
   return (
-    <div>
-      <h1>Dilshod</h1>
-    </div>
-  );
+    <>
+      <ContactBook /> 
+    </>
+  )
 }
+
 
 export default App;
