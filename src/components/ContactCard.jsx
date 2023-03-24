@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContactCard = ({ contact, contacts, setContacts }) => {
+const ContactCard = ({ contact, contacts, setContactsgi }) => {
 
     const deleteHandler = () => {
         console.log(contact.id);
