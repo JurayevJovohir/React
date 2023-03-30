@@ -106,7 +106,11 @@ a {
   @apply mt-[30px] mb-0 mx-0;
 }
 .card {
-  @apply relative inline-block;
+  @apply relative inline-block rounded-md;
+}
+
+.products-img{
+  @apply h-[310px] rounded-t-md;
 }
 .products-img-div {
   @apply w-[232px] h-[310px] cursor-pointer transition-all duration-[0.2s] ease-[ease] rounded-lg hover:opacity-80;
