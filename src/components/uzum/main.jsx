@@ -11,7 +11,6 @@ const Main = () => {
         fetch(BASE_URL + '/products')
             .then((res) => res.json())
             .then((data) => {
-                // console.log(data);
                 setProducts(data)
             });
     }, []);
